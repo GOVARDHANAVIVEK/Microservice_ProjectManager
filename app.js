@@ -10,11 +10,11 @@ mongoose.connect(process.env.mongo_uri)
 
 app.use(express.json());
 
-app.use('/api/project',projectRouter)
+app.use('/',projectRouter)
 
 
 
-const port = process.env.PORT || 7005;
+const port = process.env.PORT || 7003;
 app.listen(port,()=>{
     console.log(`running on port ${port}`)
 });
